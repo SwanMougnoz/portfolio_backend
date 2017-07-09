@@ -1,0 +1,6 @@
+.idea/
+portfolio_backend.iml
+portfolio.egg-info
+venv/
+var/
+static/
