@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from portfolio_backend.apps.blog.models import Post
+from portfolio_backend.apps.blog.serializers import PostSerializer
+
+
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
