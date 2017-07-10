@@ -16,6 +16,9 @@ class Post(models.Model):
     publish_date = models.DateTimeField(auto_now_add=True)
     tags = models.ManyToManyField(to=Tag, related_name='tagged_posts')
 
+    def __unicode__(self):
+        return self.title
+
 
 class Comment(models.Model):
     author = models.CharField(max_length=64, null=True, blank=True)
