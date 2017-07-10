@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from portfolio_backend.apps.blog.models import Post, Tag
+from portfolio_backend.apps.blog.models import Post, Tag, Comment
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -8,4 +8,10 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
+        exclude = []
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
         exclude = []
